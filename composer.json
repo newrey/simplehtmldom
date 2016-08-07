@@ -1,14 +1,14 @@
 {
-    "name": "mgargano/simplehtmldom",
-    "description": "Composer package that gives you access to and (unlike all the others at this time) autoloads S.C. Chen's PHP Simple HTML DOM Parser Library",
+    "name": "newrey/simplehtmldom",
+    "description": "PHP Simple HTML DOM Parser Library,fix bugs from http://simplehtmldom.sourceforge.net/",
     "keywords": ["html", "dom", "simple"],
-    "homepage" : "http://simplehtmldom.sourceforge.net/",
+    "homepage" : "https://github.com/newrey/simplehtmldom",
     "type": "library",
     "license": "The MIT License",
     "authors": [
         {
-            "name": "S.C. Chen",
-            "email": "me578022@gmail.com"
+            "name": "newrey",
+            "email": "mail@newrey.com"
         }
     ],
     "require": {
