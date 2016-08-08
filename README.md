@@ -3,7 +3,7 @@ Composer package that autoloads simplehtml dom, Modified version of http://sourc
 
 #usage
 ```
-composer newrey/simplehtmldom
+composer require newrey/simplehtmldom
 ```
 
 ```
