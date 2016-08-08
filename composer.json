@@ -21,7 +21,7 @@
         "files": [
             "src/simple_html_dom.php"
         ]
-    }
+    },
     "extra": {
         "branch-alias": {
             "dev-master": "1.0.x-dev"
