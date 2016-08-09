@@ -1143,8 +1143,31 @@ class simple_html_dom
 
         //before we save the string as the doc...  strip out the \r \n's if we are told to.
         if ($stripRN) {
-            $str = str_replace("\r", " ", $str);
-            $str = str_replace("\n", " ", $str);
+            //$str = str_replace("\r", " ", $str);
+            //$str = str_replace("\n", " ", $str);
+            
+            $search = array(
+                '/\>[^\S ]+/s', //strip whitespaces after tags, except space
+                '/[^\S ]+\</s', //strip whitespaces before tags, except space
+                '/(\s)+/s'  // shorten multiple whitespace sequences
+            );
+            $replace = array(
+                '>',
+                '<',
+                '\\1'
+            );
+
+            $blocks = preg_split('/(<\/?pre[^>]*>)/', $str, null, PREG_SPLIT_DELIM_CAPTURE);
+            $str = '';
+            foreach($blocks as $i => $block)
+            {
+                if($i % 4 == 2){
+                    $str .= $block; //break out <pre>...</pre> with \n's
+                }
+                else{
+                    $str .= preg_replace($search, $replace, $block);
+                }
+            }
 
             // set the length of content since we have changed it.
             $this->size = strlen($str);
