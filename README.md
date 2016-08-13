@@ -1,5 +1,5 @@
 # simplehtmldom
-Composer package that autoloads simplehtml dom, Modified version of http://sourceforge.net/projects/simplehtmldom/ 
+Composer package that autoloads simplehtml dom, Modified version of http://sourceforge.net/projects/simplehtmldom/, Power up [SeeNull](http://seenull.com)
 
 #usage
 ```
